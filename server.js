@@ -1,5 +1,6 @@
 const express = require('express');
 const app  = express();
+const port = 3000
 const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({ path: path.resolve(__dirname, './.env') });
@@ -14,10 +15,10 @@ app.use(express.json());
 // Establize initial routes
 app.use('/' , require('./routes/api/index'));
 
-app.listen(process.env.port || 3000, function(err) {
+app.listen(process.env.port || port, function(err) {
      if(err) {
          console.error(err);
          return;
      }
-     console.log('listening on port' , process.env.port || 3000);
+     console.log('listening on port' , process.env.port || port);
 });
