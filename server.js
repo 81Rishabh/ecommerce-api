@@ -15,7 +15,7 @@ app.use(express.json());
 // Establize initial routes
 app.use('/' , require('./routes/api/index'));
 
-app.listen(process.env.port || port, function(err) {
+app.listen(process.env.PORT || port, function(err) {
      if(err) {
          console.error(err);
          return;
