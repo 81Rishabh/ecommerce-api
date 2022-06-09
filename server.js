@@ -3,7 +3,6 @@ const app  = express();
 const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({ path: path.resolve(__dirname, './.env') });
-const port = process.env.port || 3000;
 
 // Establize database connection 
 const db = require('./config/db');
@@ -15,10 +14,10 @@ app.use(express.json());
 // Establize initial routes
 app.use('/' , require('./routes/api/index'));
 
-app.listen(port, function(err) {
+app.listen(process.env.port || 3000, function(err) {
      if(err) {
          console.error(err);
          return;
      }
-     console.log('listening on port' , port);
+     console.log('listening on port' , process.env.port || 3000);
 });
