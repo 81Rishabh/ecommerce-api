@@ -12,7 +12,7 @@ This is simple api of ecommerce api that containes controllers getProduct , crea
     [url]/api/products/:productId/updateQty
 #### Delte product
      [url]/api/prouducts/:productId
- ### Replace [url] to localhost:3000    
+ ### Replace [url] to http://localhost:3000    
  
  ### Clone Repository
      git clone  https://github.com/81Rishabh/ecommerce-api.git
