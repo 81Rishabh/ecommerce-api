@@ -14,7 +14,7 @@ This is simple api of ecommerce api that containes controllers getProduct , crea
      [url]/api/prouducts/:productId
  
  ### Clone Repository
-     git clone 
+     git clone  https://github.com/81Rishabh/ecommerce-api.git
     
 ### install dependencies
     npm install
