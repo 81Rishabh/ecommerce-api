@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended : false}));
 app.use(express.json());
 
 // Establize initial routes
-app.use('/api' , require('./routes/api/index'));
+app.use('/' , require('./routes/api/index'));
 
 app.listen(port, function(err) {
      if(err) {
