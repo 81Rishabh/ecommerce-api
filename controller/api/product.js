@@ -1,6 +1,6 @@
 const Product = require('../../models/product');
 
-// controller for get all the product
+// controller for getting all the product
 module.exports.getProduct = async function(req, res) {
    try {
         let product = await Product.find({});
@@ -21,6 +21,7 @@ module.exports.getProduct = async function(req, res) {
    }
 }
 
+// controller for creating product
 module.exports.create = async function(req,res){
     try {
         await Product.create(req.body);

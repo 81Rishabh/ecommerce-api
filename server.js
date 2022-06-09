@@ -1,6 +1,9 @@
 const express = require('express');
 const app  = express();
-const port = 3000;
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({ path: path.resolve(__dirname, './.env') });
+const port = process.env.port || 3000;
 
 // Establize database connection 
 const db = require('./config/db');
