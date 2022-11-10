@@ -11,7 +11,7 @@ This is simple api of ecommerce api that containes controllers getProduct , crea
      [url]/api/user/create
  #### Get orders
      [url]/api/orders
- #### Create product
+ #### Create orders
      [url]/api/orders/create
 
  ### Replace [url] to http://localhost:3000    
