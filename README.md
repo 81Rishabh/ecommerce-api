@@ -1,5 +1,5 @@
 # ecommerce-api
-This is simple api of ecommerce api that containes controllers getProduct , createProduct , editProductQty , deleteProduct
+
 
 
 
