@@ -4,14 +4,16 @@ This is simple api of ecommerce api that containes controllers getProduct , crea
 
 
 ## key Features
- #### Get product
-     [url]/api/products
+ #### login
+     [url]/api/user/login
+     
+ #### create new user
+     [url]/api/user/create
+ #### Get orders
+     [url]/api/orders
  #### Create product
-     [url]/api/products/create
-#### Update Product
-    [url]/api/products/:productId/updateQty
-#### Delte product
-     [url]/api/prouducts/:productId
+     [url]/api/orders/create
+
  ### Replace [url] to http://localhost:3000    
  
  ### Clone Repository
