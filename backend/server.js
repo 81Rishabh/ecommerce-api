@@ -1,9 +1,14 @@
 const express = require('express');
 const app  = express();
-const port = 3000
+const port = 5000
 const path = require('path');
 const dotenv = require('dotenv');
-dotenv.config({ path: path.resolve(__dirname, './.env') });
+const errorHandler = require('./middileware/error');
+const morgan = require('morgan');
+const colors = require('colors');
+const cors = require('cors');
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
 
 // Establize database connection 
 const db = require('./config/db');
@@ -12,8 +17,19 @@ const db = require('./config/db');
 app.use(express.urlencoded({extended : false}));
 app.use(express.json());
 
+// logger
+app.use(morgan('dev'));
+
+// cors middileware
+app.use(cors({origin: 'http://localhost:3000'}))
+
 // Establize initial routes
 app.use('/' , require('./routes/api/index'));
+
+// Error handle middleware
+app.use(errorHandler);
+
+
 
 app.listen(process.env.PORT || port, function(err) {
      if(err) {
